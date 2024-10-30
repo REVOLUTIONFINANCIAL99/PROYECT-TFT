@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contracts</title>
+     <!-- Importar Bootstrap desde el archivo local -->
+     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+     <!-- Importar CSS Personalizado -->
+     <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <header class="mb-4">
+        <h1>Smart Contracts</h1>
+    </header>
+
+    <main class="container">
+        <section class="smart-contract-form">
+            <h2>Crear un nuevo Smart Contract</h2>
+            <form action="{% url 'smartcontracts' %}" method="post" class="bg-light p-4 rounded shadow-sm">
+                {% csrf_token %}
+
+                <div class="form-group mb-3">
+                    <label for="contract_name">Nombre del Contrato</label>
+                    <input type="text" class="form-control" id="contract_name" name="contract_name" placeholder="Ingrese el nombre del contrato" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="contract_details">Detalles del Contrato</label>
+                    <textarea class="form-control" id="contract_details" name="contract_details" rows="4" placeholder="Ingrese los detalles del contrato" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Crear Smart Contract</button>
+            </form>
+        </section>
+
+        <section class="contract-list mt-5">
+            <h2>Lista de Smart Contracts</h2>
+            <ul class="list-group">
+                <!-- Aquí podrías iterar sobre una lista de contratos inteligentes si la tienes -->
+                <li class="list-group-item">Contrato 1</li>
+                <li class="list-group-item">Contrato 2</li>
+                <li class="list-group-item">Contrato 3</li>
+            </ul>
+        </section>
+    </main>
+    
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
