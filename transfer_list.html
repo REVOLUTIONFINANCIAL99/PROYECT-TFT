@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Transferencias</title>
+</head>
+<body>
+    <h1>Transferencias</h1>
+    <ul>
+        {% for transfer in transfers %}
+            <li>{{ transfer.sender }} → {{ transfer.receiver }}: {{ transfer.amount }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

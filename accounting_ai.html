@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contabilidad con IA</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="mb-4">
+        <h1>Contabilidad con Inteligencia Artificial</h1>
+    </header>
+
+    <main class="container">
+        <section class="ai-accounting-form">
+            <h2>Exportar Datos a Excel</h2>
+            <form action="{% url 'accounting_ai' %}" method="post" class="bg-light p-4 rounded shadow-sm">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary">Descargar Datos</button>
+            </form>
+        </section>
+        
+        <section class="data-list mt-5">
+            <h2>Datos Recogidos</h2>
+            <!-- Aquí podrías mostrar los datos recogidos si es necesario -->
+        </section>
+    </main>
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

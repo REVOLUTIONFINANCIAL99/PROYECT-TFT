@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Flow Technologies</title>
+    <!-- Importar Bootstrap desde el archivo local copiado -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Importar CSS Personalizado -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Tax Flow Technologies</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'transfers_assets' %}">Transfers</a></li>
+                <li><a href="{% url 'smartcontracts' %}">Smart Contracts</a></li>
+                <li><a href="{% url 'accounting_ai' %}">Accounting AI</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h2>Welcome to our platform</h2>
+            <p>Here you can manage your digital assets and smart contracts effectively.</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tax Flow Technologies. All rights reserved.</p>
+    </footer>
+
+    <!-- Importar Bootstrap JS desde el archivo local copiado -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
