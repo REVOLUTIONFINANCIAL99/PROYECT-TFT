@@ -1,0 +1,104 @@
+/* Importar Bootstrap desde el archivo npm instalado */
+@import url('https://getbootstrap.com/docs/5.3/examples/product/');
+
+/* Estilos Personalizados */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Usar un color de fondo suave */
+}
+
+/* Header */
+header {
+    background: #2c3e50; /* Color oscuro para el encabezado */
+    color: white;
+    padding: 10px 20px;
+}
+
+.logo h1 {
+    display: inline;
+}
+
+.nav-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos Hero */
+.hero {
+    background: #3498db; /* Color azul para la sección hero */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+}
+
+.btn {
+    background: #e74c3c; /* Botón rojo */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #c0392b; /* Oscurecer botón en hover */
+}
+
+/* Secciones de características y sobre nosotros */
+.features, .about {
+    padding: 20px;
+    text-align: center;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Añadir estilos responsivos */
+@media (max-width: 768px) {
+    .nav-links {
+        float: none;
+        text-align: center;
+    }
+
+    .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
